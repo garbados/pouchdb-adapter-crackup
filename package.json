@@ -26,5 +26,8 @@
     "@adorsys/encrypt-down": "^2.1.2",
     "jose": "^3.11.6",
     "pouchdb-adapter-leveldb-core": "^7.2.2"
+  },
+  "engines": {
+    "node": ">=12"
   }
 }
