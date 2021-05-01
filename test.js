@@ -30,6 +30,7 @@ describe('pouchdb-adapter-crackup', function () {
         adapter: 'crackup',
         db: leveldown
       })
+      throw new Error(`${db.name} setup succeeded?`)
     } catch (error) {
       if (error.message === 'EncryptDown: a JsonWebKey is required!') {
         ok = true
@@ -46,6 +47,7 @@ describe('pouchdb-adapter-crackup', function () {
         adapter: 'crackup',
         jwk: this.jwk
       })
+      throw new Error(`${db.name} setup succeeded?`)
     } catch (error) {
       if (error.message === 'pouchdb-adapter-crackup requires a leveldown constructor.') {
         ok = true
