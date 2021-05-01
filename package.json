@@ -1,0 +1,30 @@
+{
+  "name": "@garbados/pouchdb-adapter-crackup",
+  "version": "1.0.0-alpha",
+  "description": "An encrypted leveldown adapter for PouchDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "run-s test:*",
+    "test:format": "standard",
+    "test:deps": "dependency-check --unused -i mocha -i standard -i dependency-check -i npm-run-all -i nyc index.js test.js",
+    "test:suite": "mocha",
+    "cov": "nyc npm run test:suite",
+    "coveralls": "npm run cov && nyc report --reporter=text-lcov | npx coveralls"
+  },
+  "author": "Diana Thayer <garbados@gmail.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "dependency-check": "^4.1.0",
+    "leveldown": "^6.0.0",
+    "mocha": "^8.3.2",
+    "npm-run-all": "^4.1.5",
+    "nyc": "^15.1.0",
+    "pouchdb": "^7.2.2",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "@adorsys/encrypt-down": "^2.1.2",
+    "jose": "^3.11.6",
+    "pouchdb-adapter-leveldb-core": "^7.2.2"
+  }
+}
