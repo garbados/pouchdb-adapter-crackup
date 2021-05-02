@@ -98,6 +98,20 @@ describe('pouchdb-adapter-crackup', function () {
     }
   })
 
+  it('should replicate ok', async function () {
+    const db = new PouchDB('whatever')
+    await this.db.replicate.to(db)
+    const result = await db.allDocs({ include_docs: true })
+    const keys = result.rows.map(({ key, doc: { hello } }) => { return [key, hello] })
+    assert.equal(keys[0][0], 'a')
+    assert.equal(keys[1][0], 'b')
+    assert.equal(keys[2][0], 'c')
+    assert.equal(keys[0][1], 'world')
+    assert.equal(keys[1][1], 'sol')
+    assert.equal(keys[2][1], 'galaxy')
+    await db.destroy()
+  })
+
   const BENCHMARK = 1e2
   it(`should do the crypto dance ${BENCHMARK} times`, async function () {
     this.timeout(0)

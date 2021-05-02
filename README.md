@@ -6,13 +6,11 @@
 [![NPM Version](https://img.shields.io/npm/v/pouchdb-adapter-crackup.svg?style=flat-square)](https://www.npmjs.com/package/pouchdb-adapter-crackup)
 [![JS Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
 
-
-
 [comdb]: https://github.com/garbados/comdb
 
 **When they crack down, we crack up!** 🤡
 
-A PouchDB plugin that adds the *crackup* adapter, which transparently encrypts and decrypts data while preserving the sort order of document IDs and view keys. *As a result document IDs and view keys are unencrypted at rest, while the rest of the database is always encrypted.*
+A PouchDB plugin that adds the *crackup* adapter, which transparently encrypts and decrypts data while preserving the sort order of document IDs and view keys. *As a result document IDs and view keys are unencrypted at rest, while the rest of the database is always encrypted.* Regarding replication, documents are decrypted prior to transmission.
 
 This approach is in contrast to that of [ComDB][comdb], an encryption plugin that maintains an encrypted copy of changes to a database. That approach makes it possible to ensure the entire database is encrypted at rest in exchange for potentially significant resource overhead. The *crackup* adapter avoids this duplication cost while sacrificing a certain degree of data protection. If leaving document IDs and view keys unencrypted does not meet your encryption requirements, consider using [ComDB][comdb] instead.
 
