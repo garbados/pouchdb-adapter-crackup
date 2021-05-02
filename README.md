@@ -23,7 +23,7 @@ For example:
 ```javascript
 const leveldown = require('leveldown')
 const PouchDB = require('pouchdb')
-PouchDB.plugin(require('@garbados/pouchdb-adapter-crackup'))
+PouchDB.plugin(require('pouchdb-adapter-crackup'))
 
 // first, we generate a key to use for encryption. works like a password.
 const jwk = await PouchDB.genJWK()
@@ -42,7 +42,7 @@ console.log(doc.hello)
 Use [npm](https://www.npmjs.com/) or whatever.
 
 ```bash
-$ npm i --save @garbados/pouchdb-adapter-crackup
+$ npm i --save pouchdb-adapter-crackup
 ```
 
 ## Usage

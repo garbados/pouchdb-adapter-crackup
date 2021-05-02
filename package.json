@@ -1,5 +1,5 @@
 {
-  "name": "@garbados/pouchdb-adapter-crackup",
+  "name": "pouchdb-adapter-crackup",
   "version": "1.0.0-alpha",
   "description": "An encrypted leveldown adapter for PouchDB.",
   "main": "index.js",
