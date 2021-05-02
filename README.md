@@ -1,5 +1,13 @@
 # pouchdb-adapter-crackup
 
+[![CI](https://github.com/garbados/pouchdb-adapter-crackup/actions/workflows/ci.yaml/badge.svg)](https://github.com/garbados/pouchdb-adapter-crackup/actions/workflows/ci.yaml)
+[![Coverage Status](https://coveralls.io/repos/github/garbados/pouchdb-adapter-crackup/badge.svg?branch=master)](https://coveralls.io/github/garbados/pouchdb-adapter-crackup?branch=master)
+[![Stability](https://img.shields.io/badge/stability-experimental-orange.svg?style=flat-square)](https://nodejs.org/api/documentation.html#documentation_stability_index)
+[![NPM Version](https://img.shields.io/npm/v/pouchdb-adapter-crackup.svg?style=flat-square)](https://www.npmjs.com/package/pouchdb-adapter-crackup)
+[![JS Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+
+
+
 [comdb]: https://github.com/garbados/comdb
 
 **When they crack down, we crack up!** 🤡
