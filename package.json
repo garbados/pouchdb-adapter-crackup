@@ -6,10 +6,10 @@
   "scripts": {
     "test": "run-s test:*",
     "test:format": "standard",
-    "test:deps": "dependency-check --unused -i mocha -i standard -i dependency-check -i npm-run-all -i nyc index.js test.js",
+    "test:deps": "dependency-check --unused -i mocha -i standard -i dependency-check -i npm-run-all -i nyc -i coveralls index.js test.js",
     "test:suite": "mocha",
     "cov": "nyc npm run test:suite",
-    "coveralls": "npm run cov && nyc report --reporter=text-lcov | npx coveralls"
+    "coveralls": "npm run cov && nyc report --reporter=text-lcov"
   },
   "author": "Diana Thayer <garbados@gmail.com>",
   "license": "Apache-2.0",

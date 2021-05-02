@@ -33,8 +33,10 @@ jobs:
       - name: unit test
         run: npm test
 
-      - name: coverage
+      - name: produce coverage report
         run: npm run coveralls
-        env:
-          COVERALLS_REPO_TOKEN: "${{ secrets.COVERALLS_REPO_TOKEN }}"
-          COVERALLS_GIT_BRANCH: "${{ github.ref }}"
+
+      - name: report coverage to coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ github.token }}
