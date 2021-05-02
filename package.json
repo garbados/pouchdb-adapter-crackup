@@ -9,7 +9,7 @@
     "test:deps": "dependency-check --unused -i mocha -i standard -i dependency-check -i npm-run-all -i nyc -i coveralls index.js test.js",
     "test:suite": "mocha",
     "cov": "nyc npm run test:suite",
-    "coveralls": "npm run cov && nyc report --reporter=text-lcov"
+    "coveralls": "npm run cov && nyc report --reporter=text-lcov > lcov.info"
   },
   "author": "Diana Thayer <garbados@gmail.com>",
   "license": "Apache-2.0",
